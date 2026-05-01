@@ -1,0 +1,29 @@
+{
+  "name": "sparkdex",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "framer-motion": "12.38.0",
+    "lucide-react": "1.14.0",
+    "next": "16.2.4",
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.2.4",
+    "@types/node": "^22.16.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "eslint": "^9.26.0",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "4.2.4",
+    "typescript": "^5.9.3"
+  }
+}

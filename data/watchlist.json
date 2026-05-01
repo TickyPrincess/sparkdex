@@ -1,0 +1,32 @@
+[
+  {
+    "cardId": "moon-fox-first-edition",
+    "alert": "Price < $100",
+    "targetPrice": 98,
+    "petNote": "Deep discount vs 30d mean, but still liquid."
+  },
+  {
+    "cardId": "ancient-flame-dragon",
+    "alert": "7d jump > 15%",
+    "targetPrice": 240,
+    "petNote": "Momentum is hot. Watch for exhaustion wick."
+  },
+  {
+    "cardId": "crystal-turtle-foil",
+    "alert": "Confidence < 50",
+    "targetPrice": 55,
+    "petNote": "Thin market can fake breakouts."
+  },
+  {
+    "cardId": "thunder-lizard-holo-004",
+    "alert": "Reclaim $155",
+    "targetPrice": 155,
+    "petNote": "Needs stronger comp flow before upgrade to buy zone."
+  },
+  {
+    "cardId": "shadow-cat-promo",
+    "alert": "Volume anomaly",
+    "targetPrice": 42,
+    "petNote": "Steady mover. Good liquidity anchor in volatile weeks."
+  }
+]
