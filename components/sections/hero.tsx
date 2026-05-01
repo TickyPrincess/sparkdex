@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { SparkMascot } from "@/components/mascot";
 import { TerminalFrame } from "@/components/terminal-frame";
@@ -71,6 +72,18 @@ export function HeroSection() {
           >
             No hype mode: if confidence is weak, SparkDex says “watch, don’t chase.”
           </motion.div>
+
+          <motion.a
+            href="https://x.com/PikachuPet1"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex items-center gap-2 rounded-md border border-emerald-400/45 bg-emerald-500/10 px-4 py-2 text-xs uppercase tracking-[0.12em] text-emerald-100 transition hover:bg-emerald-500/20"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.24 }}
+          >
+            Follow updates on X <ArrowUpRight className="h-3.5 w-3.5" />
+          </motion.a>
         </div>
 
         <TerminalFrame title="sparkdex://green-console" rightSlot={<SparkMascot className="h-11 w-11" />}>
