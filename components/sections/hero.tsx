@@ -9,14 +9,14 @@ const scriptedLines = [
   "/wake",
   "/scan Thunder Lizard Holo #004",
   "/hunt underpriced vintage foils",
-  "/risk low-liquidity slabs",
+  "/risk Crystal Turtle Foil",
 ];
 
 const pulseOutput = [
-  "⚡ SparkDex Pet awake. 3 unstable movers detected.",
-  "Moon Fox First Edition: listing drift below 30d average.",
-  "Crystal Turtle Foil: spike detected, but sales depth is thin.",
-  "Ancient Flame Dragon: overheated range. trim-alert armed.",
+  "[sparkdex] pet online :: 3 unstable movers",
+  "Moon Fox First Edition :: listing drift below 30d average",
+  "Crystal Turtle Foil :: breakout printed on thin liquidity",
+  "Ancient Flame Dragon :: heat spike detected, caution flag raised",
 ];
 
 export function HeroSection() {
@@ -40,54 +40,54 @@ export function HeroSection() {
       <div className="grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:items-center">
         <div>
           <motion.p
-            className="text-xs uppercase tracking-[0.25em] text-lime-300"
+            className="text-xs uppercase tracking-[0.25em] text-emerald-300"
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            Terminal-native card market scout
+            Terminal-native collectible card scanner
           </motion.p>
           <motion.h1
-            className="mt-4 text-4xl font-semibold leading-tight text-zinc-100 sm:text-5xl"
+            className="mt-4 text-4xl font-semibold leading-tight text-emerald-100 sm:text-5xl"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08 }}
           >
-            Wake your pet. Track the market. Catch the mispriced cards.
+            Boot the pet. Parse the market. Tag mispriced cards.
           </motion.h1>
           <motion.p
-            className="mt-4 max-w-xl text-sm text-zinc-300 sm:text-base"
+            className="mt-4 max-w-xl text-sm text-emerald-200/85 sm:text-base"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.14 }}
           >
-            SparkDex is a terminal-native AI pet that watches collectible card prices, scans market
-            shifts, and turns noisy listings into clear buy, hold, sell, and risk signals.
+            SparkDex is a green-screen style AI market scout for collectible cards. It monitors listings,
+            compares sold comps, and emits compact buy/hold/sell + risk signals with uncertainty included.
           </motion.p>
           <motion.div
-            className="mt-6 inline-flex rounded-full border border-lime-300/35 bg-lime-300/10 px-4 py-2 text-xs text-lime-200"
+            className="mt-6 inline-flex rounded-full border border-emerald-400/35 bg-emerald-400/10 px-4 py-2 text-xs text-emerald-200"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Built for underground traders, not dashboard tourists.
+            No hype mode: if confidence is weak, SparkDex says “watch, don’t chase.”
           </motion.div>
         </div>
 
-        <TerminalFrame title="sparkdex://hero-terminal" rightSlot={<SparkMascot className="h-11 w-11" />}>
-          <div className="space-y-3 font-mono text-sm text-zinc-200">
+        <TerminalFrame title="sparkdex://green-console" rightSlot={<SparkMascot className="h-11 w-11" />}>
+          <div className="space-y-3 font-mono text-sm text-emerald-100/95">
             {visibleCommands.map((line, index) => (
               <motion.p
                 key={`${line}-${index}`}
                 initial={{ opacity: 0, y: 4 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={index === activeLine ? "text-lime-200" : "text-zinc-300"}
+                className={index === activeLine ? "text-emerald-200" : "text-emerald-200/65"}
               >
-                <span className="text-zinc-500">&gt;</span> {line}
-                {index === activeLine ? <span className="ml-1 animate-pulse text-lime-300">▋</span> : null}
+                <span className="text-emerald-500">&gt;</span> {line}
+                {index === activeLine ? <span className="ml-1 animate-pulse text-emerald-300">▋</span> : null}
               </motion.p>
             ))}
 
-            <div className="mt-5 space-y-2 border-t border-zinc-800 pt-4 text-xs text-sky-100/90">
+            <div className="mt-5 space-y-2 border-t border-emerald-950/70 pt-4 text-xs text-emerald-200/90">
               {pulseOutput.map((line) => (
                 <p key={line}>{line}</p>
               ))}

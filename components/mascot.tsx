@@ -8,9 +8,9 @@ interface MascotProps {
 }
 
 const frames = [
-  { body: "#E9FF52", glow: "#D7FF00", eye: "#0B0D12", spark: "#91E5FF" },
-  { body: "#F0FF66", glow: "#CEFF22", eye: "#08101F", spark: "#9ADFFF" },
-  { body: "#FFF07A", glow: "#F9FF2B", eye: "#0C1228", spark: "#B9EBFF" },
+  { body: "#7CFF9A", glow: "#56EA7B", eye: "#03100A", spark: "#B5FFCA" },
+  { body: "#94FFAE", glow: "#67F287", eye: "#04120B", spark: "#CCFFD8" },
+  { body: "#B3FFC7", glow: "#7BFF9D", eye: "#02110B", spark: "#E0FFE8" },
 ] as const;
 
 export function SparkMascot({ evolution = 0, className }: MascotProps) {

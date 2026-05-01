@@ -39,13 +39,13 @@ export function SignalEngineSection() {
       {engineRows.map((row) => (
         <article
           key={row.name}
-          className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-4 transition hover:border-sky-200/35"
+          className="rounded-xl border border-emerald-950 bg-emerald-950/20 p-4 transition hover:border-emerald-300/35"
         >
-          <p className="inline-flex items-center gap-2 text-sm font-medium text-zinc-100">
-            <row.icon className="h-4 w-4 text-sky-200" />
+          <p className="inline-flex items-center gap-2 text-sm font-medium text-emerald-100">
+            <row.icon className="h-4 w-4 text-emerald-300" />
             {row.name}
           </p>
-          <p className="mt-2 text-sm leading-relaxed text-zinc-400">{row.detail}</p>
+          <p className="mt-2 text-sm leading-relaxed text-emerald-300/70">{row.detail}</p>
         </article>
       ))}
     </div>

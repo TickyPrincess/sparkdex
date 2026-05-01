@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 const mono = IBM_Plex_Mono({
@@ -8,16 +8,10 @@ const mono = IBM_Plex_Mono({
   variable: "--font-mono",
 });
 
-const sans = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-sans",
-});
-
 export const metadata: Metadata = {
-  title: "SparkDex — Terminal-native AI pet for card market tracking",
+  title: "SparkDex — Green Terminal Card Market Pet",
   description:
-    "SparkDex is a terminal-native AI pet for collectible card market tracking, watchlists, risk-aware buy/hold/sell signals, and mispricing hunts.",
+    "SparkDex is a terminal-native AI pet for collectible card market tracking, watchlists, and risk-aware buy/hold/sell signals.",
 };
 
 export default function RootLayout({
@@ -27,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-black">
-      <body className={`${sans.variable} ${mono.variable} spark-bg min-h-screen antialiased`}>{children}</body>
+      <body className={`${mono.variable} spark-bg min-h-screen antialiased`}>{children}</body>
     </html>
   );
 }

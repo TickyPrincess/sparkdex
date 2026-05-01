@@ -23,26 +23,26 @@ export default function HomePage() {
 
       <SectionShell
         id="demo"
-        eyebrow="Live Demo Terminal"
-        title="Click commands. Watch SparkDex answer like a real market scout."
-        subtitle="Short, useful, risk-aware output — no fake certainty, no overhype."
+        eyebrow="Command Console"
+        title="Run commands. Get crisp signals. Skip the noise."
+        subtitle="SparkDex speaks like a trading terminal: short output, clear risk, zero fantasy alpha."
       >
         <LiveDemoTerminal signals={signals} />
       </SectionShell>
 
       <SectionShell
         id="signals"
-        eyebrow="Market Signal Cards"
-        title="Price, liquidity, confidence, and signal state in one board."
-        subtitle="Structured mock data today, adapter-ready for real providers tomorrow."
+        eyebrow="Signal Board"
+        title="Every card line includes price, pressure, confidence, and risk context."
+        subtitle="Mock feed by default. Provider adapters ready when you wire real market data."
       >
         <MarketSignals signals={signals} />
       </SectionShell>
 
       <SectionShell
         id="watchlist"
-        eyebrow="Watchlist"
-        title="Track the cards you care about, with alert context and pet commentary."
+        eyebrow="Watchlist Feed"
+        title="Keep targets hot. Get alerts before the market shifts too far."
       >
         <WatchlistSection items={watchlist} />
       </SectionShell>
@@ -50,40 +50,40 @@ export default function HomePage() {
       <SectionShell
         id="engine"
         eyebrow="Signal Engine"
-        title="How SparkDex thinks before calling a buy, hold, sell, or watch."
+        title="How SparkDex scores opportunities before saying buy, hold, sell, or watch."
       >
         <SignalEngineSection />
       </SectionShell>
 
       <SectionShell
         id="codex"
-        eyebrow="Codex Pet Integration"
-        title="Run SparkDex as your terminal companion inside Codex."
-        subtitle="Use the hatch command, then paste the full personality prompt as your base behavior profile."
+        eyebrow="Codex Integration"
+        title="Drop SparkDex into Codex as a terminal companion."
+        subtitle="Use hatch command, paste the personality prompt, and run market scans in chat."
       >
         <CodexPetSection />
       </SectionShell>
 
       <SectionShell
         id="install"
-        eyebrow="GitHub Installation"
-        title="Clone, install, configure env, and boot the dev server."
+        eyebrow="GitHub Install"
+        title="Clone. Install. Configure env. Boot."
       >
         <GithubInstallSection />
       </SectionShell>
 
       <SectionShell
         id="providers"
-        eyebrow="Data Providers"
-        title="Mock by default. Adapter architecture for real market data."
+        eyebrow="Providers"
+        title="Adapter-first data layer: mock now, real feeds later."
       >
         <DataProvidersSection />
       </SectionShell>
 
       <SectionShell
         id="safety"
-        eyebrow="Risk"
-        title="Always treat signals as probabilistic market research."
+        eyebrow="Risk Notice"
+        title="Treat every signal as probabilistic research, never guaranteed outcome."
       >
         <RiskDisclaimerSection />
       </SectionShell>

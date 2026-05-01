@@ -21,7 +21,7 @@ function CopyButton({ value }: { value: string }) {
     <button
       type="button"
       onClick={onCopy}
-      className="inline-flex items-center gap-1 rounded-md border border-zinc-700 bg-zinc-900 px-2.5 py-1 text-xs text-zinc-300 transition hover:border-lime-300/40 hover:text-lime-200"
+      className="inline-flex items-center gap-1 rounded-md border border-emerald-950 bg-emerald-950/30 px-2.5 py-1 text-xs text-emerald-200 transition hover:border-emerald-400/40 hover:text-emerald-100"
     >
       {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
       {copied ? "Copied" : "Copy"}
@@ -32,22 +32,22 @@ function CopyButton({ value }: { value: string }) {
 export function CodexPetSection() {
   return (
     <div className="space-y-4">
-      <article className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-4">
+      <article className="rounded-xl border border-emerald-950 bg-emerald-950/20 p-4">
         <div className="mb-2 flex items-center justify-between gap-2">
-          <p className="text-xs uppercase tracking-[0.14em] text-zinc-500">Hatch command</p>
+          <p className="text-xs uppercase tracking-[0.14em] text-emerald-300/60">Hatch command</p>
           <CopyButton value={hatchCommand} />
         </div>
-        <pre className="overflow-x-auto rounded-lg border border-zinc-800 bg-black/70 p-3 text-xs text-lime-200">
+        <pre className="overflow-x-auto rounded-lg border border-emerald-950 bg-black/70 p-3 text-xs text-emerald-200">
           <code>{hatchCommand}</code>
         </pre>
       </article>
 
-      <article className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-4">
+      <article className="rounded-xl border border-emerald-950 bg-emerald-950/20 p-4">
         <div className="mb-2 flex items-center justify-between gap-2">
-          <p className="text-xs uppercase tracking-[0.14em] text-zinc-500">Full pet personality prompt</p>
+          <p className="text-xs uppercase tracking-[0.14em] text-emerald-300/60">Full pet personality prompt</p>
           <CopyButton value={codexPetPrompt} />
         </div>
-        <pre className="max-h-[380px] overflow-auto rounded-lg border border-zinc-800 bg-black/70 p-3 text-xs text-zinc-200">
+        <pre className="max-h-[380px] overflow-auto rounded-lg border border-emerald-950 bg-black/70 p-3 text-xs text-emerald-100/90">
           <code>{codexPetPrompt}</code>
         </pre>
       </article>

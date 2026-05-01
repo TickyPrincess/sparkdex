@@ -46,7 +46,7 @@ export function LiveDemoTerminal({ signals }: { signals: MarketSignal[] }) {
     <TerminalFrame
       title="sparkdex://live-demo"
       rightSlot={
-        <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.12em] text-zinc-400">
+        <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.12em] text-emerald-300/65">
           <span>{formLabel}</span>
           <SparkMascot evolution={evolution} className="h-10 w-10" />
         </div>
@@ -54,30 +54,30 @@ export function LiveDemoTerminal({ signals }: { signals: MarketSignal[] }) {
     >
       <div className="grid gap-4 lg:grid-cols-[220px_1fr]">
         <div className="space-y-2">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-zinc-500">Commands</p>
+          <p className="text-[11px] uppercase tracking-[0.18em] text-emerald-300/55">Commands</p>
           {commandPresets.map((preset) => (
             <button
               key={preset.value}
               type="button"
               onClick={() => execute(preset.value)}
-              className="block w-full rounded-lg border border-zinc-800 bg-zinc-900/80 px-3 py-2 text-left text-xs text-zinc-200 transition hover:border-lime-300/40 hover:text-lime-200"
+              className="block w-full rounded-lg border border-emerald-950 bg-emerald-950/30 px-3 py-2 text-left text-xs text-emerald-200 transition hover:border-emerald-400/40 hover:text-emerald-100"
             >
-              <span className="block text-[10px] uppercase tracking-[0.12em] text-zinc-500">{preset.label}</span>
+              <span className="block text-[10px] uppercase tracking-[0.12em] text-emerald-300/55">{preset.label}</span>
               <span className="mt-1 block font-mono">{preset.value}</span>
             </button>
           ))}
         </div>
 
-        <div className="rounded-xl border border-zinc-800/80 bg-black/65 p-3">
+        <div className="rounded-xl border border-emerald-950/85 bg-black/65 p-3">
           <div className="max-h-[360px] space-y-1.5 overflow-y-auto pr-2 font-mono text-xs sm:text-sm">
             {log.map((line, index) => (
               <motion.p
                 key={`${line.kind}-${index}-${line.text}`}
                 initial={{ opacity: 0, y: 2 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={line.kind === "cmd" ? "text-lime-200" : "text-zinc-200"}
+                className={line.kind === "cmd" ? "text-emerald-200" : "text-emerald-100/90"}
               >
-                {line.kind === "cmd" ? <span className="text-zinc-500">&gt; </span> : null}
+                {line.kind === "cmd" ? <span className="text-emerald-500">&gt; </span> : null}
                 {line.text}
               </motion.p>
             ))}
@@ -86,10 +86,10 @@ export function LiveDemoTerminal({ signals }: { signals: MarketSignal[] }) {
           <button
             type="button"
             onClick={() => execute(activeInput)}
-            className="mt-3 flex w-full items-center justify-between rounded-lg border border-zinc-800 bg-zinc-900/70 px-3 py-2 text-left text-xs text-zinc-300 transition hover:border-lime-300/40"
+            className="mt-3 flex w-full items-center justify-between rounded-lg border border-emerald-950 bg-emerald-950/35 px-3 py-2 text-left text-xs text-emerald-200 transition hover:border-emerald-400/40"
           >
             <span className="font-mono">{`> ${activeInput}`}</span>
-            <span className="animate-pulse text-lime-300">run ↵</span>
+            <span className="animate-pulse text-emerald-300">run ↵</span>
           </button>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { RiskLabel } from "@/lib/signal-engine/types";
 
 const riskClass: Record<RiskLabel, string> = {
   Low: "bg-emerald-300/15 text-emerald-200",
-  Moderate: "bg-sky-300/15 text-sky-200",
+  Moderate: "bg-emerald-300/15 text-emerald-300",
   Elevated: "bg-amber-300/15 text-amber-200",
   High: "bg-rose-300/15 text-rose-200",
 };
